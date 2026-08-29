@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Terms of Use — Argrynguard Daily Tracker</title>
+  <meta name="description" content="Terms of Use for Argrynguard Daily Tracker — Age Requirement, Prototype Disclaimer, Medical &amp; Activity Disclaimer, Data Privacy &amp; Network, Backup Responsibility, Liability &amp; Governing Law. Contact: argrynguard@gmail.com" />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="Terms of Use — Argrynguard Daily Tracker" />
+  <meta property="og:description" content="Read the Terms of Use for Argrynguard Daily Tracker. Austrian law applies." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #F4F6F8;
+      --surface: #FFFFFF;
+      --card: #FFFFFF;
+      --text: #212121;
+      --muted: #757575;
+      --divider: #E0E0E0;
+      --accent-primary: #006D6D;
+      --accent-primary-light: #2AA39A;
+      --shadow: 0 8px 32px rgba(0,0,0,.06), 0 2px 8px rgba(0,0,0,.04);
+      --radius-xl: 20px;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --max: 860px;
+      /* section accents — kept identical to the app */
+      --c-pink: #E91E63;
+      --c-grey: #607D8B;
+      --c-red: #E53935;
+      --c-blue: #2196F3;
+      --c-amber: #FFB800;
+      --c-purple: #7C4DFF;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg: #121212;
+        --surface: #1E1E1E;
+        --card: #2A2A2A;
+        --text: #E0E0E0;
+        --muted: #9E9E9E;
+        --divider: #424242;
+        --shadow: 0 8px 32px rgba(0,0,0,.4);
+      }
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color: var(--accent-primary-light); text-decoration: none}
+    a:hover{text-decoration: underline}
+    /* Header */
+    .topbar{
+      position: sticky;
+      top:0;
+      z-index: 50;
+      backdrop-filter: saturate(180%) blur(12px);
+      background: color-mix(in srgb, var(--surface) 86%, transparent);
+      border-bottom: 1px solid var(--divider);
+    }
+    .topbar__inner{
+      max-width: var(--max);
+      margin:0 auto;
+      padding: 12px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      font-weight:800; letter-spacing:.2px;
+    }
+    .brand__mark{
+      width:36px; height:36px; border-radius: 10px;
+      background: linear-gradient(135deg, #006D6D, #2AA39A);
+      display:grid; place-items:center;
+      color:white; font-weight:800;
+      box-shadow: 0 4px 12px rgba(0,109,109,.35);
+      flex: 0 0 auto;
+    }
+    .brand__name{font-size:15px}
+    .brand__sub{font-size:11px; color:var(--muted); font-weight:600; letter-spacing:.06em; text-transform:uppercase; margin-top:-2px}
+    .pill{
+      font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+      padding:7px 12px; border-radius:999px;
+      background: #006D6D; color:white;
+      white-space:nowrap;
+    }
+
+    /* Hero */
+    .hero{
+      max-width: var(--max);
+      margin:0 auto;
+      padding: 36px 20px 8px;
+    }
+    .hero h1{
+      margin:0;
+      font-size: clamp(28px, 4vw, 36px);
+      line-height:1.15;
+      letter-spacing:-.02em;
+      font-weight:800;
+    }
+    .hero h1 span{
+      background: linear-gradient(135deg, #006D6D, #2AA39A 70%);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color: transparent;
+      background-clip:text;
+    }
+    .meta{
+      margin-top:12px;
+      display:flex; flex-wrap:wrap; gap:10px;
+      color:var(--muted); font-size:13px;
+    }
+    .meta__item{
+      display:inline-flex; align-items:center; gap:7px;
+      background: var(--card);
+      border:1px solid var(--divider);
+      padding:6px 10px; border-radius:999px;
+    }
+    .meta__dot{width:8px;height:8px;border-radius:50%; background:#2AA39A}
+
+    /* Intro */
+    .intro{
+      max-width: var(--max);
+      margin: 18px auto 0;
+      padding: 0 20px;
+    }
+    .intro__card{
+      background: var(--card);
+      border:1px solid var(--divider);
+      border-radius: var(--radius-lg);
+      padding:18px 20px;
+      box-shadow: var(--shadow);
+    }
+    .intro__card p{
+      margin:0; font-size:14px; color:var(--muted); line-height:1.6;
+    }
+    .intro__card strong{color:var(--text)}
+
+    /* TOC */
+    .toc{
+      max-width: var(--max);
+      margin: 20px auto 0;
+      padding: 0 20px;
+    }
+    .toc__card{
+      background: var(--card);
+      border:1px solid var(--divider);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+    }
+    .toc__title{
+      font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase;
+      color:var(--muted); margin:0 0 10px;
+    }
+    .toc__grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap:8px;
+    }
+    @media (max-width: 640px){ .toc__grid{grid-template-columns: 1fr} }
+    .toc__link{
+      display:flex; align-items:center; gap:10px;
+      padding:10px 12px;
+      border-radius:10px;
+      background: var(--bg);
+      border:1px solid transparent;
+      color:var(--text);
+      font-size:13px; font-weight:600;
+      transition: .15s;
+    }
+    .toc__link:hover{
+      border-color: var(--divider);
+      transform: translateY(-1px);
+      text-decoration:none;
+    }
+    .toc__icon{
+      width:28px; height:28px; border-radius:8px;
+      display:grid; place-items:center; color:white; flex:0 0 auto; font-size:14px;
+    }
+
+    /* Main */
+    .content{
+      max-width: var(--max);
+      margin: 22px auto 0;
+      padding: 0 20px 40px;
+      display:grid; gap:22px;
+    }
+    .section{
+      background: var(--card);
+      border:1px solid var(--divider);
+      border-radius: var(--radius-lg);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      scroll-margin-top: 72px;
+    }
+    .section__head{
+      padding: 18px 20px 14px;
+      border-bottom:1px solid var(--divider);
+      display:flex; gap:14px; align-items:flex-start;
+    }
+    .section__icon{
+      width:52px; height:52px; border-radius:14px;
+      display:grid; place-items:center; color:white; flex:0 0 auto;
+      box-shadow: 0 6px 18px color-mix(in srgb, var(--acc) 32%, transparent);
+      background: linear-gradient(135deg, var(--acc), color-mix(in srgb, var(--acc) 72%, white));
+      font-size:22px;
+    }
+    .section__kicker{
+      font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--acc);
+      margin:0 0 4px;
+    }
+    .section__title{
+      margin:0; font-size:18px; font-weight:800; line-height:1.2;
+    }
+    .section__subtitle{
+      margin:6px 0 0; font-size:13px; color:var(--muted); font-style:italic; line-height:1.5;
+    }
+    .section__body{
+      padding: 18px 20px 18px;
+    }
+    .heading{
+      display:flex; align-items:center; gap:8px;
+      margin: 8px 0 10px;
+      font-size:13px; font-weight:800; letter-spacing:.02em;
+    }
+    .heading__bar{
+      width:4px; height:16px; border-radius:2px; background:var(--acc); flex:0 0 auto;
+    }
+    .heading:first-child{margin-top:0}
+    .bullets{
+      list-style:none; padding:0; margin:0 0 18px;
+      display:grid; gap:10px;
+    }
+    .bullets:last-child{margin-bottom:0}
+    .bullets li{
+      display:flex; gap:10px;
+      font-size:13.5px; line-height:1.55;
+    }
+    .bullets li::before{
+      content:"";
+      width:6px; height:6px; border-radius:50%;
+      background: var(--acc);
+      margin-top: 8px;
+      flex: 0 0 auto;
+    }
+    .section--age{ --acc: var(--c-pink)}
+    .section--proto{ --acc: var(--c-grey)}
+    .section--medical{ --acc: var(--c-red)}
+    .section--privacy{ --acc: var(--c-blue)}
+    .section--backup{ --acc: var(--c-amber)}
+    .section--liability{ --acc: var(--c-purple)}
+
+    /* Contact card */
+    .contact{
+      background: linear-gradient(135deg, color-mix(in srgb, var(--c-purple) 14%, var(--card)), var(--card));
+      border:1px solid color-mix(in srgb, var(--c-purple) 24%, var(--divider));
+      border-radius: var(--radius-lg);
+      padding:18px 20px;
+      box-shadow: var(--shadow);
+    }
+    .contact__kicker{
+      display:flex; align-items:center; gap:8px;
+      font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--c-purple);
+      margin:0 0 12px;
+    }
+    .contact__row{
+      display:flex; gap:8px; align-items:baseline;
+      font-size:13px; line-height:1.5; margin: 6px 0;
+    }
+    .contact__label{ font-weight:700; color:var(--c-purple); white-space:nowrap}
+    .contact__value{ color:var(--text) }
+    .contact__note{ margin-top:10px; font-size:12px; color:var(--muted); line-height:1.5}
+
+    /* Acceptance banner (informational, non-interactive – mirrors app flow) */
+    .notice{
+      display:flex; gap:12px; align-items:flex-start;
+      background: color-mix(in srgb, #2AA39A 10%, var(--card));
+      border:1px solid color-mix(in srgb, #2AA39A 22%, var(--divider));
+      border-radius: var(--radius-lg);
+      padding:14px 16px;
+      font-size:13px; line-height:1.5; color:var(--muted);
+    }
+    .notice__icon{
+      width:32px; height:32px; border-radius:9px; display:grid; place-items:center;
+      background:#2AA39A; color:white; flex:0 0 auto;
+    }
+
+    /* Footer */
+    footer{
+      max-width: var(--max);
+      margin:0 auto;
+      padding: 8px 20px 36px;
+      color:var(--muted); font-size:12px; line-height:1.6;
+      text-align:center;
+    }
+    footer a{color:var(--muted); text-decoration:underline; text-underline-offset:3px}
+    .footer__divider{ height:1px; background:var(--divider); margin: 12px 0 16px}
+
+    /* Print */
+    @media print{
+      .topbar{position:static}
+      .hero{padding-top:18px}
+      .section, .intro__card, .toc__card, .contact{box-shadow:none; break-inside:avoid}
+      a{color:inherit}
+    }
+  </style>
+</head>
+<body>
+  <!-- Top bar -->
+  <header class="topbar" role="banner">
+    <div class="topbar__inner">
+      <div class="brand" aria-label="Argrynguard Daily Tracker">
+        <div class="brand__mark" aria-hidden="true">A</div>
+        <div>
+          <div class="brand__name">Argrynguard Daily Tracker</div>
+          <div class="brand__sub">Terms of Use</div>
+        </div>
+      </div>
+      <span class="pill">Version 2 &middot; Effective 2026-08-29</span>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1><span>Terms of Use</span> for Argrynguard Daily Tracker</h1>
+    <div class="meta" aria-label="Document metadata">
+      <span class="meta__item"><span class="meta__dot" aria-hidden="true"></span> Application: Argrynguard Daily Tracker</span>
+      <span class="meta__item">Version: 2</span>
+      <span class="meta__item">Governing law: Republic of Austria</span>
+      <span class="meta__item">Contact: <a href="mailto:argrynguard@gmail.com">argrynguard@gmail.com</a></span>
+    </div>
+  </div>
+
+  <!-- Intro -->
+  <div class="intro">
+    <div class="intro__card">
+      <p>
+        <strong>Please read carefully.</strong> By installing or using Argrynguard Daily Tracker you agree to all sections below.
+        You must be at least <strong>18 years old</strong> to use this app. If you do not agree, do not use the app.
+        The wording below is kept the same as in the in-app <em>Terms of Use</em> screen (<code>lib/presentation/screens/terms_of_use_screen.dart</code>).
+      </p>
+    </div>
+  </div>
+
+  <!-- Table of contents -->
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc__card">
+      <p class="toc__title">Contents — 6 Sections</p>
+      <div class="toc__grid">
+        <a class="toc__link" href="#age">
+          <span class="toc__icon" style="background: var(--c-pink)">1</span>
+          Age Requirement
+        </a>
+        <a class="toc__link" href="#prototype">
+          <span class="toc__icon" style="background: var(--c-grey)">2</span>
+          Prototype &amp; As-Is Disclaimer
+        </a>
+        <a class="toc__link" href="#medical">
+          <span class="toc__icon" style="background: var(--c-red)">3</span>
+          Medical &amp; Activity Disclaimer
+        </a>
+        <a class="toc__link" href="#privacy">
+          <span class="toc__icon" style="background: var(--c-blue)">4</span>
+          Data Privacy &amp; Network
+        </a>
+        <a class="toc__link" href="#backup">
+          <span class="toc__icon" style="background: var(--c-amber)">5</span>
+          Backup Responsibility
+        </a>
+        <a class="toc__link" href="#liability">
+          <span class="toc__icon" style="background: var(--c-purple)">6</span>
+          Liability, Severability &amp; Governing Law
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main class="content" aria-label="Terms content">
+
+    <!-- 1 — Age Requirement -->
+    <section id="age" class="section section--age" aria-labelledby="h-age">
+      <div class="section__head">
+        <div class="section__icon" aria-hidden="true">🎂</div>
+        <div>
+          <p class="section__kicker">Section 1 of 6</p>
+          <h2 id="h-age" class="section__title">Age Requirement</h2>
+          <p class="section__subtitle">You must be at least 18 years old to use this app.</p>
+        </div>
+      </div>
+      <div class="section__body">
+        <div class="heading"><span class="heading__bar"></span> Why this matters:</div>
+        <ul class="bullets">
+          <li>This app deals with personal development, breathing exercises, and physical activity tracking. These features are intended for adults who can make informed decisions about their own health.</li>
+          <li>By using this app, you represent that you are at least 18 years old and legally capable of entering into this agreement.</li>
+          <li>If you are under 18, you may not use this app. Please close and uninstall it immediately.</li>
+          <li>If you are a parent or guardian and believe your minor child has installed this app, please contact us to have any data removed.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 2 — Prototype & As-Is -->
+    <section id="prototype" class="section section--proto" aria-labelledby="h-proto">
+      <div class="section__head">
+        <div class="section__icon" aria-hidden="true">🛠️</div>
+        <div>
+          <p class="section__kicker">Section 2 of 6</p>
+          <h2 id="h-proto" class="section__title">Prototype &amp; As-Is Disclaimer</h2>
+          <p class="section__subtitle">This app is a prototype. Use it at your own risk.</p>
+        </div>
+      </div>
+      <div class="section__body">
+        <div class="heading"><span class="heading__bar"></span> What this means for you:</div>
+        <ul class="bullets">
+          <li>This app is a prototype, provided “AS-IS” and without any express or implied warranties of any kind.</li>
+          <li>The developer makes no promises about correctness, reliability, availability, or fitness for any particular purpose.</li>
+          <li>Data corruption, loss, or inconsistency may happen. You use the app entirely at your own risk.</li>
+          <li>Features may change, break, or be removed at any time without notice.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3 — Medical & Activity -->
+    <section id="medical" class="section section--medical" aria-labelledby="h-medical">
+      <div class="section__head">
+        <div class="section__icon" aria-hidden="true">⚕️</div>
+        <div>
+          <p class="section__kicker">Section 3 of 6</p>
+          <h2 id="h-medical" class="section__title">Medical &amp; Activity Disclaimer</h2>
+          <p class="section__subtitle">This app does not provide medical advice. Consult a certified doctor before any breathing exercise or physical activity.</p>
+        </div>
+      </div>
+      <div class="section__body">
+        <div class="heading"><span class="heading__bar"></span> This app is NOT a medical device:</div>
+        <ul class="bullets">
+          <li>This app does not provide medical advice, diagnosis, treatment, or professional recommendations of any kind.</li>
+          <li>Nothing in this app should be treated as medical guidance or a substitute for advice from a licensed healthcare professional.</li>
+          <li>All pre-made exercises (breathing patterns, grounding techniques, reflection prompts, routines, etc.) are simply tools you may choose to use — not prescriptions.</li>
+          <li>If you think you may have a medical emergency, contact your local emergency services immediately — do not rely on this app.</li>
+        </ul>
+        <div class="heading"><span class="heading__bar"></span> Before you do any activity:</div>
+        <ul class="bullets">
+          <li>Consult a certified doctor before starting any breathing exercise, physical workout, or wellness routine included in or tracked by this app.</li>
+          <li>Some breathing techniques can be unsafe for people with respiratory, cardiovascular, or other medical conditions. Get medical clearance first.</li>
+          <li>Sports and physical activities carry a risk of injury. Make sure your doctor has cleared you for the level of activity you plan to do.</li>
+          <li>You alone decide whether to perform any activity, and you assume full responsibility for any injuries, health issues, or adverse effects that may result.</li>
+          <li>Stop immediately and seek medical help if you feel pain, dizziness, shortness of breath, or any other warning sign during an activity.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4 — Data Privacy & Network -->
+    <section id="privacy" class="section section--privacy" aria-labelledby="h-privacy">
+      <div class="section__head">
+        <div class="section__icon" aria-hidden="true">🔒</div>
+        <div>
+          <p class="section__kicker">Section 4 of 6</p>
+          <h2 id="h-privacy" class="section__title">Data Privacy &amp; Network</h2>
+          <p class="section__subtitle">Your data stays on your device. Standard technical data may be visible when downloading fonts or images.</p>
+        </div>
+      </div>
+      <div class="section__body">
+        <div class="heading"><span class="heading__bar"></span> How your data is handled:</div>
+        <ul class="bullets">
+          <li>All your data — goals, journal entries, fears, reflections, books, notes, sessions — is stored in plain text on your device only.</li>
+          <li>The app runs fully locally. No personal data is sent to any server controlled by the developer.</li>
+          <li>Do not enter sensitive information (passwords, financial data, medical records) into any field. The storage is not encrypted.</li>
+          <li>Anyone who gains physical access to your device, or to a backup file, may be able to read your entries.</li>
+        </ul>
+        <div class="heading"><span class="heading__bar"></span> What connects to the internet:</div>
+        <ul class="bullets">
+          <li>The developer does not collect, transmit, or store any of your personal data. The app is designed to run offline.</li>
+          <li>While the app runs entirely offline, standard technical data (like your IP address) may be visible to servers when downloading necessary system fonts or images.</li>
+          <li>These connections are a normal part of how mobile apps work and are outside the developer’s control.</li>
+          <li>If you are concerned about IP privacy, you can use a VPN or revoke network access for this app in your device settings.</li>
+        </ul>
+        <div class="heading"><span class="heading__bar"></span> Notification permissions:</div>
+        <ul class="bullets">
+          <li>This app shows a persistent notification while a tracking session is active — displaying the activity name and a live stopwatch so you can see your progress at a glance, even when the app is in the background.</li>
+          <li>Android requires a visible notification for any app running a foreground service. This is a platform-level requirement and ensures you are always aware when an activity is being tracked.</li>
+          <li>The notification content never leaves your device. No notification data is collected, stored, or transmitted to any server.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5 — Backup -->
+    <section id="backup" class="section section--backup" aria-labelledby="h-backup">
+      <div class="section__head">
+        <div class="section__icon" aria-hidden="true">💾</div>
+        <div>
+          <p class="section__kicker">Section 5 of 6</p>
+          <h2 id="h-backup" class="section__title">Backup Responsibility</h2>
+          <p class="section__subtitle">You are responsible for your own backups.</p>
+        </div>
+      </div>
+      <div class="section__body">
+        <div class="heading"><span class="heading__bar"></span> You are responsible for your data:</div>
+        <ul class="bullets">
+          <li>You are solely responsible for creating and maintaining regular backups of your data.</li>
+          <li>The developer is not liable if the app fails to save or load a backup, or if you lose access to any of your data for any reason.</li>
+          <li>Always keep backups in a separate, secure location, and test that they can be restored.</li>
+          <li>If you uninstall the app or reset your device without a backup, your data will be lost permanently.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 6 — Liability -->
+    <section id="liability" class="section section--liability" aria-labelledby="h-liability">
+      <div class="section__head">
+        <div class="section__icon" aria-hidden="true">⚖️</div>
+        <div>
+          <p class="section__kicker">Section 6 of 6</p>
+          <h2 id="h-liability" class="section__title">Liability, Severability &amp; Governing Law</h2>
+          <p class="section__subtitle">Austrian law applies. Contact: argrynguard@gmail.com</p>
+        </div>
+      </div>
+      <div class="section__body">
+        <div class="heading"><span class="heading__bar"></span> Limitation of liability:</div>
+        <ul class="bullets">
+          <li>This app is provided free of charge.</li>
+          <li>To the maximum extent permitted by law, the developer is not liable for any damages, losses, or injuries arising from the use of, or inability to use, this app.</li>
+          <li>If any liability were found, it would be limited to the amount you paid for the app — which is zero.</li>
+        </ul>
+        <div class="heading"><span class="heading__bar"></span> Severability clause:</div>
+        <ul class="bullets">
+          <li>If a court or judge finds any part of these Terms unenforceable or invalid (for example, the medical disclaimer or the limitation of liability), that part shall be severed and removed.</li>
+          <li>The remaining parts of these Terms shall stay in full force and effect and continue to apply.</li>
+        </ul>
+        <div class="heading"><span class="heading__bar"></span> Governing law &amp; jurisdiction:</div>
+        <ul class="bullets">
+          <li>These Terms are governed by the laws of the Republic of Austria.</li>
+          <li>Any dispute, claim, or legal action arising out of or relating to these Terms or the use of this app shall fall under the exclusive jurisdiction of the competent courts of Austria.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact & Governing Law card -->
+    <div class="contact" aria-label="Contact and governing law">
+      <p class="contact__kicker">✉️ CONTACT &amp; GOVERNING LAW</p>
+      <div class="contact__row">
+        <span class="contact__label">Contact:</span>
+        <span class="contact__value"><a href="mailto:argrynguard@gmail.com">argrynguard@gmail.com</a></span>
+      </div>
+      <div class="contact__row">
+        <span class="contact__label">Jurisdiction:</span>
+        <span class="contact__value">All disputes are governed by Austrian law and fall under the exclusive jurisdiction of Austrian courts.</span>
+      </div>
+      <p class="contact__note">For any questions about these Terms, please email the address above.</p>
+    </div>
+
+    <!-- Acceptance note -->
+    <div class="notice" role="note" aria-label="Acceptance note">
+      <div class="notice__icon" aria-hidden="true">✓</div>
+      <div>
+        <strong style="color:var(--text)">In-app acceptance</strong> — In the app this document is presented as 6 sequential steps that each require an explicit checkbox (“I have read, understood, and agree with this section” — and for the first section, “I confirm I am at least 18 years old”). The final <em>Accept All &amp; Start Using the App</em> button is only enabled once every section has been accepted. Declining closes the app.
+      </div>
+    </div>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer__divider"></div>
+    <div>© 2026 Argrynguard Daily Tracker · Terms of Use v2 · Open-source licenses are available inside the app via <em>View Open Source Licenses</em>.</div>
+    <div style="margin-top:4px">Source of truth: <code>lib/presentation/screens/terms_of_use_screen.dart</code> · This HTML keeps all wording identical.</div>
+  </footer>
+</body>
+</html>
