@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="light dark" />
   <title>Terms of Use — Argrynguard Daily Tracker</title>
-  <meta name="description" content="Terms of Use for Argrynguard Daily Tracker — Age Requirement, Prototype Disclaimer, Medical &amp; Activity Disclaimer, Data Privacy &amp; Network, Backup Responsibility, Liability &amp; Governing Law. Contact: argrynguard@gmail.com" />
+  <meta name="description" content="Terms of Use for Argrynguard Daily Tracker — Age Requirement, Prototype Disclaimer, Medical & Activity Disclaimer, Data Privacy & Network, Optional App Usage Tracking, Backup Responsibility, Liability & Governing Law. Contact: argrynguard@gmail.com" />
   <meta name="robots" content="index,follow" />
   <meta property="og:title" content="Terms of Use — Argrynguard Daily Tracker" />
   <meta property="og:description" content="Read the Terms of Use for Argrynguard Daily Tracker. Austrian law applies." />
@@ -262,6 +262,7 @@
     .section--proto{ --acc: var(--c-grey)}
     .section--medical{ --acc: var(--c-red)}
     .section--privacy{ --acc: var(--c-blue)}
+    .section--appusage{ --acc: var(--c-purple)}
     .section--backup{ --acc: var(--c-amber)}
     .section--liability{ --acc: var(--c-purple)}
 
@@ -286,20 +287,6 @@
     .contact__value{ color:var(--text) }
     .contact__note{ margin-top:10px; font-size:12px; color:var(--muted); line-height:1.5}
 
-    /* Acceptance banner (informational, non-interactive – mirrors app flow) */
-    .notice{
-      display:flex; gap:12px; align-items:flex-start;
-      background: color-mix(in srgb, #2AA39A 10%, var(--card));
-      border:1px solid color-mix(in srgb, #2AA39A 22%, var(--divider));
-      border-radius: var(--radius-lg);
-      padding:14px 16px;
-      font-size:13px; line-height:1.5; color:var(--muted);
-    }
-    .notice__icon{
-      width:32px; height:32px; border-radius:9px; display:grid; place-items:center;
-      background:#2AA39A; color:white; flex:0 0 auto;
-    }
-
     /* Footer */
     footer{
       max-width: var(--max);
@@ -310,6 +297,26 @@
     }
     footer a{color:var(--muted); text-decoration:underline; text-underline-offset:3px}
     .footer__divider{ height:1px; background:var(--divider); margin: 12px 0 16px}
+    .footer__love{
+      display:inline-flex; align-items:center; gap:6px;
+      font-size:13px; font-weight:600; color:var(--muted);
+    }
+    .footer__heart{
+      display:inline-grid; place-items:center;
+      color: #E91E63;
+      animation: heartbeat 1.4s ease-in-out infinite;
+      transform-origin: center;
+    }
+    @keyframes heartbeat{
+      0%{ transform: scale(1); }
+      14%{ transform: scale(1.25); }
+      28%{ transform: scale(1); }
+      42%{ transform: scale(1.25); }
+      70%{ transform: scale(1); }
+    }
+    @media (prefers-reduced-motion: reduce){
+      .footer__heart{ animation: none; }
+    }
 
     /* Print */
     @media print{
@@ -331,7 +338,7 @@
           <div class="brand__sub">Terms of Use</div>
         </div>
       </div>
-      <span class="pill">Version 2 &middot; Effective 2026-08-29</span>
+      <span class="pill">Version 2 &middot; Effective 2026-08-31</span>
     </div>
   </header>
 
@@ -359,7 +366,7 @@
   <!-- Table of contents -->
   <nav class="toc" aria-label="Table of contents">
     <div class="toc__card">
-      <p class="toc__title">Contents — 6 Sections</p>
+      <p class="toc__title">Contents — 7 Sections</p>
       <div class="toc__grid">
         <a class="toc__link" href="#age">
           <span class="toc__icon" style="background: var(--c-pink)">1</span>
@@ -377,12 +384,16 @@
           <span class="toc__icon" style="background: var(--c-blue)">4</span>
           Data Privacy &amp; Network
         </a>
+        <a class="toc__link" href="#appusage">
+          <span class="toc__icon" style="background: var(--c-purple)">5</span>
+          Optional App Usage Tracking
+        </a>
         <a class="toc__link" href="#backup">
-          <span class="toc__icon" style="background: var(--c-amber)">5</span>
+          <span class="toc__icon" style="background: var(--c-amber)">6</span>
           Backup Responsibility
         </a>
         <a class="toc__link" href="#liability">
-          <span class="toc__icon" style="background: var(--c-purple)">6</span>
+          <span class="toc__icon" style="background: var(--c-purple)">7</span>
           Liability, Severability &amp; Governing Law
         </a>
       </div>
@@ -397,7 +408,7 @@
       <div class="section__head">
         <div class="section__icon" aria-hidden="true">🎂</div>
         <div>
-          <p class="section__kicker">Section 1 of 6</p>
+          <p class="section__kicker">Section 1 of 7</p>
           <h2 id="h-age" class="section__title">Age Requirement</h2>
           <p class="section__subtitle">You must be at least 18 years old to use this app.</p>
         </div>
@@ -408,7 +419,7 @@
           <li>This app deals with personal development, breathing exercises, and physical activity tracking. These features are intended for adults who can make informed decisions about their own health.</li>
           <li>By using this app, you represent that you are at least 18 years old and legally capable of entering into this agreement.</li>
           <li>If you are under 18, you may not use this app. Please close and uninstall it immediately.</li>
-          <li>If you are a parent or guardian and believe your minor child has installed this app, please contact us to have any data removed.</li>
+          <li>If you are a parent or guardian and believe your minor child has installed this app, please have them uninstall the app — all data is stored locally on the device only and is not collected or stored by us, so uninstalling deletes it.</li>
         </ul>
       </div>
     </section>
@@ -418,7 +429,7 @@
       <div class="section__head">
         <div class="section__icon" aria-hidden="true">🛠️</div>
         <div>
-          <p class="section__kicker">Section 2 of 6</p>
+          <p class="section__kicker">Section 2 of 7</p>
           <h2 id="h-proto" class="section__title">Prototype &amp; As-Is Disclaimer</h2>
           <p class="section__subtitle">This app is a prototype. Use it at your own risk.</p>
         </div>
@@ -439,7 +450,7 @@
       <div class="section__head">
         <div class="section__icon" aria-hidden="true">⚕️</div>
         <div>
-          <p class="section__kicker">Section 3 of 6</p>
+          <p class="section__kicker">Section 3 of 7</p>
           <h2 id="h-medical" class="section__title">Medical &amp; Activity Disclaimer</h2>
           <p class="section__subtitle">This app does not provide medical advice. Consult a certified doctor before any breathing exercise or physical activity.</p>
         </div>
@@ -468,7 +479,7 @@
       <div class="section__head">
         <div class="section__icon" aria-hidden="true">🔒</div>
         <div>
-          <p class="section__kicker">Section 4 of 6</p>
+          <p class="section__kicker">Section 4 of 7</p>
           <h2 id="h-privacy" class="section__title">Data Privacy &amp; Network</h2>
           <p class="section__subtitle">Your data stays on your device. Standard technical data may be visible when downloading fonts or images.</p>
         </div>
@@ -476,10 +487,10 @@
       <div class="section__body">
         <div class="heading"><span class="heading__bar"></span> How your data is handled:</div>
         <ul class="bullets">
-          <li>All your data — goals, journal entries, fears, reflections, books, notes, sessions — is stored in plain text on your device only.</li>
+          <li>All your data — goals, journal entries, fears, reflections, books, notes, sessions — is stored encrypted at rest on your device only (AES-256-GCM; key held in Android EncryptedSharedPreferences / Keystore, migrated from legacy plaintext on first run).</li>
           <li>The app runs fully locally. No personal data is sent to any server controlled by the developer.</li>
-          <li>Do not enter sensitive information (passwords, financial data, medical records) into any field. The storage is not encrypted.</li>
-          <li>Anyone who gains physical access to your device, or to a backup file, may be able to read your entries.</li>
+          <li>Even with on-device encryption, do not enter highly sensitive information (passwords, financial data, medical records) into any field. If an attacker gains root access, obtains your unlocked device, or obtains a backup file and its password, entries could be exposed.</li>
+          <li>Anyone who gains access to your unlocked device or to an unprotected backup file may be able to read your entries. Encrypted backups require your password to decrypt — we cannot read them without it.</li>
         </ul>
         <div class="heading"><span class="heading__bar"></span> What connects to the internet:</div>
         <ul class="bullets">
@@ -497,12 +508,50 @@
       </div>
     </section>
 
-    <!-- 5 — Backup -->
+    <!-- 5 — Optional App Usage Tracking -->
+    <section id="appusage" class="section section--appusage" aria-labelledby="h-appusage">
+      <div class="section__head">
+        <div class="section__icon" aria-hidden="true">📱</div>
+        <div>
+          <p class="section__kicker">Section 5 of 7</p>
+          <h2 id="h-appusage" class="section__title">Optional App Usage Tracking</h2>
+          <p class="section__subtitle">Opt-in only: let an activity count your time in other apps. Off by default.</p>
+        </div>
+      </div>
+      <div class="section__body">
+        <div class="heading"><span class="heading__bar"></span> What it is (optional, off by default):</div>
+        <ul class="bullets">
+          <li>You can link an activity (e.g. “YouTube”) to one or more installed apps. If you do, the time you spend in those apps counts automatically — no need to press Start.</li>
+          <li>This is 100% opt-in. Nothing is linked until you tap “Connect app” and pick an app. You can unlink anytime or turn off “auto-sync” per link.</li>
+          <li>Only works on Android. You must grant the system “Usage Access” permission for Argrynguard in Android Settings. You can revoke it anytime there.</li>
+        </ul>
+        <div class="heading"><span class="heading__bar"></span> Exactly what we read:</div>
+        <ul class="bullets">
+          <li>Only one number per app per day: total time in foreground (e.g. 25 s or 3 m), from Android’s UsageStatsManager queryUsageStats.</li>
+          <li>We do NOT read what you did inside the app, which videos, messages, websites, or any content — just how long it was on screen.</li>
+          <li>We query once when you open Dashboard or History (and on app resume). We do not run a background tracker.</li>
+        </ul>
+        <div class="heading"><span class="heading__bar"></span> How we store &amp; use it:</div>
+        <ul class="bullets">
+          <li>We create one completed session per day per linked activity (e.g. “YouTube — 25 s on 2026-08-31”) and store it encrypted at rest on your device only (same AES-256-GCM encrypted file as your other sessions).</li>
+          <li>That session appears in History, Session Mix (Distribution pie), Archetype minutes and statistics — just like manual time. Delete the session or unlink the app and it’s gone.</li>
+          <li>No data leaves your device. Nothing is sent to a server, analytics, or third party. If you export a backup, the auto sessions are inside your backup file — you control it.</li>
+        </ul>
+        <div class="heading"><span class="heading__bar"></span> Your control:</div>
+        <ul class="bullets">
+          <li>Grant/revoke Usage Access in Settings → Usage Access at any time. Without permission we read nothing.</li>
+          <li>Per activity: Connect / unlink apps, or toggle auto-sync off to keep the link but stop auto-creation.</li>
+          <li>Per data: delete any auto session in History like any other session, or delete the whole activity.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 6 — Backup -->
     <section id="backup" class="section section--backup" aria-labelledby="h-backup">
       <div class="section__head">
         <div class="section__icon" aria-hidden="true">💾</div>
         <div>
-          <p class="section__kicker">Section 5 of 6</p>
+          <p class="section__kicker">Section 6 of 7</p>
           <h2 id="h-backup" class="section__title">Backup Responsibility</h2>
           <p class="section__subtitle">You are responsible for your own backups.</p>
         </div>
@@ -518,12 +567,12 @@
       </div>
     </section>
 
-    <!-- 6 — Liability -->
+    <!-- 7 — Liability -->
     <section id="liability" class="section section--liability" aria-labelledby="h-liability">
       <div class="section__head">
         <div class="section__icon" aria-hidden="true">⚖️</div>
         <div>
-          <p class="section__kicker">Section 6 of 6</p>
+          <p class="section__kicker">Section 7 of 7</p>
           <h2 id="h-liability" class="section__title">Liability, Severability &amp; Governing Law</h2>
           <p class="section__subtitle">Austrian law applies. Contact: argrynguard@gmail.com</p>
         </div>
@@ -562,20 +611,11 @@
       <p class="contact__note">For any questions about these Terms, please email the address above.</p>
     </div>
 
-    <!-- Acceptance note -->
-    <div class="notice" role="note" aria-label="Acceptance note">
-      <div class="notice__icon" aria-hidden="true">✓</div>
-      <div>
-        <strong style="color:var(--text)">In-app acceptance</strong> — In the app this document is presented as 6 sequential steps that each require an explicit checkbox (“I have read, understood, and agree with this section” — and for the first section, “I confirm I am at least 18 years old”). The final <em>Accept All &amp; Start Using the App</em> button is only enabled once every section has been accepted. Declining closes the app.
-      </div>
-    </div>
-
   </main>
 
   <footer role="contentinfo">
     <div class="footer__divider"></div>
-    <div>© 2026 Argrynguard Daily Tracker · Terms of Use v2 · Open-source licenses are available inside the app via <em>View Open Source Licenses</em>.</div>
-    <div style="margin-top:4px">Source of truth: <code>lib/presentation/screens/terms_of_use_screen.dart</code> · This HTML keeps all wording identical.</div>
+    <div class="footer__love">Made with <span class="footer__heart" aria-hidden="true">❤</span><span class="sr-only">love</span></div>
   </footer>
 </body>
 </html>
