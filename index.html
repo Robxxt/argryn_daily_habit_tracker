@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="light dark" />
   <title>Terms of Use — Argrynguard Daily Tracker</title>
-  <meta name="description" content="Terms of Use for Argrynguard Daily Tracker — Age Requirement, Prototype Disclaimer, Medical & Activity Disclaimer, Data Privacy & Network, Optional App Usage Tracking, Backup Responsibility, Liability & Governing Law. Contact: argrynguard@gmail.com" />
+  <meta name="description" content="Terms of Use for Argrynguard Daily Tracker v3 — Age Requirement, Prototype Disclaimer, Medical & Activity Disclaimer, Data Privacy & Network, Optional App Usage Tracking (UsageEvents with timestamps), Backup Responsibility, Liability & Governing Law. Contact: argrynguard@gmail.com" />
   <meta name="robots" content="index,follow" />
   <meta property="og:title" content="Terms of Use — Argrynguard Daily Tracker" />
   <meta property="og:description" content="Read the Terms of Use for Argrynguard Daily Tracker. Austrian law applies." />
@@ -338,7 +338,7 @@
           <div class="brand__sub">Terms of Use</div>
         </div>
       </div>
-      <span class="pill">Version 2 &middot; Effective 2026-08-31</span>
+      <span class="pill">Version 3 &middot; Effective 2026-09-01</span>
     </div>
   </header>
 
@@ -347,7 +347,7 @@
     <h1><span>Terms of Use</span> for Argrynguard Daily Tracker</h1>
     <div class="meta" aria-label="Document metadata">
       <span class="meta__item"><span class="meta__dot" aria-hidden="true"></span> Application: Argrynguard Daily Tracker</span>
-      <span class="meta__item">Version: 2</span>
+        <span class="meta__item">Version: 3</span>
       <span class="meta__item">Governing law: Republic of Austria</span>
       <span class="meta__item">Contact: <a href="mailto:argrynguard@gmail.com">argrynguard@gmail.com</a></span>
     </div>
@@ -527,21 +527,22 @@
         </ul>
         <div class="heading"><span class="heading__bar"></span> Exactly what we read:</div>
         <ul class="bullets">
-          <li>Only one number per app per day: total time in foreground (e.g. 25 s or 3 m), from Android’s UsageStatsManager queryUsageStats.</li>
-          <li>We do NOT read what you did inside the app, which videos, messages, websites, or any content — just how long it was on screen.</li>
-          <li>We query once when you open Dashboard or History (and on app resume). We do not run a background tracker.</li>
+          <li>With your permission we read <em>when</em> you used linked apps: start/end timestamps of each foreground session from Android UsageEvents (e.g. YouTube 09:14–09:22, 14:30–14:33), plus duration. Fallback is one total per day from UsageStats if events are unavailable.</li>
+          <li>We do NOT read what you did inside the app, which videos, messages, websites, or any content — just package name + timestamps + how long it was on screen.</li>
+          <li>We query only when you open Dashboard/History or on app resume. We do not run a continuous background tracker; events are read for the selected day to build the correct Attention timeline.</li>
         </ul>
         <div class="heading"><span class="heading__bar"></span> How we store &amp; use it:</div>
         <ul class="bullets">
-          <li>We create one completed session per day per linked activity (e.g. “YouTube — 25 s on 2026-08-31”) and store it encrypted at rest on your device only (same AES-256-GCM encrypted file as your other sessions).</li>
-          <li>That session appears in History, Session Mix (Distribution pie), Archetype minutes and statistics — just like manual time. Delete the session or unlink the app and it’s gone.</li>
+          <li>We create one encrypted session per foreground interval (e.g. “YouTube — 8 m at 09:14 on 2026-08-31”) instead of the old single 00:00 bucket, and store it encrypted at rest on your device only (same AES-256-GCM as other sessions).</li>
+          <li>Those sessions appear chronologically in Attention → Timeline, History, Session Mix and statistics — just like manual time, but with accurate order. Delete any auto segment or unlink the app and it’s gone.</li>
           <li>No data leaves your device. Nothing is sent to a server, analytics, or third party. If you export a backup, the auto sessions are inside your backup file — you control it.</li>
+          <li>Granular timestamps are more sensitive (they reveal daily rhythm). They never leave the device and are protected by the same encryption and Keystore key as all other data.</li>
         </ul>
         <div class="heading"><span class="heading__bar"></span> Your control:</div>
         <ul class="bullets">
           <li>Grant/revoke Usage Access in Settings → Usage Access at any time. Without permission we read nothing.</li>
           <li>Per activity: Connect / unlink apps, or toggle auto-sync off to keep the link but stop auto-creation.</li>
-          <li>Per data: delete any auto session in History like any other session, or delete the whole activity.</li>
+          <li>Per data: delete any auto segment in History/Attention Timeline like any other session, or delete the whole activity.</li>
         </ul>
       </div>
     </section>
